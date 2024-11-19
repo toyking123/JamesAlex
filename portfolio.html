@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task 5 WebApps</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lab Task 5 WebApps</h1>
+            <nav>
+                <button onclick="navigate('index.html')">About Us</button>
+                <button onclick="navigate('portfolio.html')">Portfolio</button>
+                <button onclick="navigate('contact.html')">Contact Us</button>
+            </nav>
+        </header>
+
+        <section class="our-awards">
+            <h2>Our Awards:</h2>
+
+            <section>
+                <!-- Academic Awards Dropdown -->
+                <button class="dropdown-btn" onclick="toggleDropdown('academic-awards')">Academic Awards</button>
+                <div id="academic-awards" class="dropdown-content">
+                    <p><strong>Dean’s List</strong> - Recognized for outstanding academic performance.</p>
+                    <p><strong>Top Student</strong> - Awarded to the top student in the program.</p>
+                </div>
+    
+                <!-- Sports Awards Dropdown -->
+                <button class="dropdown-btn" onclick="toggleDropdown('sports-awards')">Sports Awards</button>
+                <div id="sports-awards" class="dropdown-content">
+                    <p><strong>Inter-College Champion</strong> - Won 1st place in inter-college basketball tournament.</p>
+                    <p><strong>Best Athlete</strong> - Recognized for overall excellence in sports.</p>
+                </div>
+    
+                <!-- Creative Awards Dropdown -->
+                <button class="dropdown-btn" onclick="toggleDropdown('creative-awards')">Creative Awards</button>
+                <div id="creative-awards" class="dropdown-content">
+                    <p><strong>Design Competition Winner</strong> - 1st place in the annual college design competition.</p>
+                    <p><strong>Photography Award</strong> - Best photo entry in the college’s photography contest.</p>
+                </div>
+
+                <!--Certificate-->
+                <button class="dropdown-btn" onclick="toggleDropdown('our-certificate')">Our Certificate</button>
+                <div id="our-certificate" class="dropdown-content">
+                    <li><a href="certificate1.pdf" target="_blank">Science in Human Resource Management (MSHRM)</a></li>
+                    <li><a href="certificate1.pdf" target="_blank">Science in Marketing (MS Marketing)</a></li>
+                </div>
+            </section>
+    
+            <footer>
+                <p>Copyright © Group X S1 2023/2024</p>
+            </footer>
+        </div>
+
+            <!-- External JavaScript -->
+    <script src="js/lib/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    </body>
+    </html>

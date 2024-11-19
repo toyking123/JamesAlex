@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task 5 WebApps</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lab Task 5 WebApps</h1>
+            <nav>
+                <button onclick="navigate('index.html')">About Us</button>
+                <button onclick="navigate('portfolio.html')">Portfolio</button>
+                <button onclick="navigate('contact.html')">Contact Us</button>
+            </nav>
+        </header>
+        <section class="team-members">
+            <h2>Team Members:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Student Name</th>
+                        <th>Reg. No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AIMAN ADLI BIN MOHD SARMAN</td>
+                        <td>10DDT22F2501</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>NURUL IZZAH BINTI SHAEFE</td>
+                        <td>10DDT22F2500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <button class="dropdown-btn" onclick="toggleDropdown('personal-details')">Personal Details</button>
+            <div id="personal-details" class="dropdown-content">
+                <!-- Content for Personal Details can be added here -->
+                <div class="tutor-card">
+                    <div class="tutor-photo">
+                        <img src="images/aiman.jpeg" alt="Details Aiman Adli">
+                    </div>
+                    <div class="tutor-info">
+                       
+                        <p><strong>NAME:</strong> AIMAN ADLI BIN MOHD SARMAN</p>
+                        <p><strong>Interest:</strong> Big Data and Computer Security Systems</p>
+                        <p><strong>Dreams in Academics:</strong> To publish groundbreaking research in cybersecurity and data encryption techniques.</p>
+                        <p><strong>Ambition:</strong> To become a Chief Technology Officer (CTO) of a tech company focused on building innovative security solutions.</p>
+                    </div>
+                </div>
+
+                <div class="tutor-card">
+                    <div class="tutor-photo">
+                        <img src="images/izzah.jpeg" alt="Details Nurul Izzah">
+                    </div>
+                    <div class="tutor-info">
+                        <p><strong>NAME:</strong> NURUL IZZAH BINTI SHAEFE</p>
+                        <p><strong>Interest:</strong> Artificial Intelligence and Software Development</p>
+                        <p><strong>Dreams in Academics:</strong> To pursue a master's degree in AI and contribute to the development of intelligent systems that benefit society.</p>
+                        <p><strong>Ambition:</strong> To work as an AI specialist developing innovative solutions for healthcare and education industries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="dropdown-btn" onclick="toggleDropdown('dream-career')">Dream Career</button>
+            <div id="dream-career" class="dropdown-content">
+                <section id="Dream Career">
+                    <div class="person-info">
+                        <div class="person-info">
+                            <!-- AIMAN ADLI -->
+                            <h2>AIMAN ADLI</h2>
+                            <p><strong>Chief Technology Officer (CTO)</strong></p>
+                            <p>Innovating in cybersecurity and data encryption technologies, leading research and development teams to create cutting-edge solutions for securing data in an increasingly digital world. This involves collaborating with other tech leaders to build scalable and secure systems for enterprises, governments, and individuals.</p>
+                           
+                        </div>
+                        <!-- NURUL IZZAH -->
+                        <div class="person-info">
+                            <h2>NURUL IZZAH</h2>
+                            <p><strong> AI Specialist / AI Solutions Architect</strong></p>
+                        <p>Developing innovative AI systems that improve patient care in healthcare and enhance learning experiences in the education sector, driving meaningful social impact with cutting-edge technologies.</p>
+                    </div>
+                </section>
+            </div>
+            
+        </section>
+
+        <footer>
+            <p>Copyright © Group X S1 2023/2024</p>
+        </footer>
+    </div>
+
+              <!-- External JavaScript -->
+              <script src="js/lib/jquery-3.7.1.min.js"></script>
+              <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lab Task 5 WebApps</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>About Us</h1>
+            <nav>
+                <button onclick="navigate('index.html')">Home</button>
+                <button onclick="navigate('portfolio.html')">Portfolio</button>
+                <button onclick="navigate('contact.html')">Contact Us</button>
+            </nav>
+        </header>
+        
+        <section class="about-us">
+            <h2>Welcome to Group DDT5A</h2>
+            <p>
+                We are a dynamic team of passionate individuals dedicated to creating innovative web applications. Our mission is to empower users through intuitive and efficient digital solutions. With expertise in coding, design, and strategy, we aim to transform ideas into impactful projects that drive success.
+            </p>
+            <p>
+                Over the years, our group has earned recognition for excellence in software development, creative portfolios, and impactful community projects. We take pride in blending creativity with technology to deliver the best outcomes for our clients and community.
+            </p>
+            <h3>What We Offer:</h3>
+            <ul>
+                <li>Custom web application development</li>
+                <li>Innovative design and user experience</li>
+                <li>Business strategy and consultation</li>
+                <li>Community-focused tech solutions</li>
+            </ul>
+        </section>
+        
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Reach out to us through the following methods:</p>
+            <div class="contact-buttons">
+                <button onclick="window.location.href='mailto:DDT5A_student@gmail.com';">Email Us</button>
+                <button onclick="window.location.href='https://wa.me/1234567890';">WhatsApp Us</button>
+                <button onclick="callNumber()">Call Us</button>
+            </div>
+            <p>
+                <strong>Email:</strong> <a href="mailto:DDT5A_student@gmail.com">groupx@example.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+1234567890">+1234567890</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>Copyright © Group X S1 2023/2024</p>
+        </footer>
+    </div>
+
+         <!-- External JavaScript -->
+            <script src="js/lib/jquery-3.7.1.min.js"></script>
+            <script src="js/script.js"></script>
+
+</body>
+</html>
