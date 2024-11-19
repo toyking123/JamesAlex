@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Tuition Centre - Quality education for all ages.">
-    <meta name="keywords" content="Tuition Centre, Courses, Tutors, Contact, Education">
+    <meta name="description" content="Explore our wide range of courses tailored to help you excel academically.">
+    <meta name="keywords" content="Tuition Centre Courses, Education, Learning">
     <meta name="author" content="Aiman, Ucu, Izzah">
     
-    <title>Welcome | Tuition Centre</title>
+    <title>Courses | Tuition Centre</title>
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- External CSS Link -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -26,14 +25,14 @@
         </div>
         <!-- Menu Section -->
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="courses.html">Courses</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
             <li><a href="tutors.html">Tutors</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
 
-
+        
         <select id="options" onchange="navigateToPage()">
             <option value="">Select a page...</option>
             <option value="index.html">Home</option>
@@ -94,76 +93,74 @@
         setInterval(updateMarquee, 1000);
     </script>
 
-<head>
-    <title>JavaScript in HTML</title>
-</head>
-<body>
-    <button onclick="greet()">Greet</button>
-
-    <script>
-    function greet() {
-        alert("Welcome to our website!");
-    }
-    </script>
-</body>
-
 
     <!-- Header Section -->
-    <header class="home-header">
-        <h1>Welcome to Tuition Centre</h1>
-        <p>Providing quality education to nurture future success.</p>
+    <header class="courses-header">
+        <h1>Our Courses</h1>
+        <p>Discover a variety of courses designed to cater to your learning needs.</p>
     </header>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <img id="slideshow" src="image1.jpg" width="800" height="600">
+        <br>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+    
+    <script>
+    let images = ["image1.jpg", "image2.jpg"];
+    let index = 0;
+    
+    function nextSlide() {
+        index = (index + 1) % images.length;
+        document.getElementById("slideshow").src = images[index];
+    }
+    </script>
+    
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Introduction Section -->
-        <section id="introduction">
-            <h2>Why Choose Us?</h2>
-            <p>
-                At Tuition Centre, we are committed to providing personalized learning experiences that help students excel academically and develop essential skills for the future.
-            </p>
-        </section>
+        <!-- Courses Information Section -->
+        <section id="courses-info">
+            <!-- Table Structure using div elements -->
+            <div class="table">
+                <!-- Row for Subjects -->
+                <div class="table-row">
+                    <div class="table-header">SUBJECT</div>
+                    <div class="table-cell">BM</div>
+                    <div class="table-cell">ENGLISH</div>
+                    <div class="table-cell">MATH</div>
+                    <div class="table-cell">SCIENCE</div>
+                    <div class="table-cell">HISTORY</div>
+                    <div class="table-cell">PHYSICS</div>
+                    <div class="table-cell">CHEMISTRY</div>
+                    <div class="table-cell">BIOLOGY</div>
+                    <div class="table-cell">ADD MATH</div>
+                    <div class="table-cell">ACCOUNT</div>
+                </div>
 
-        <!-- Featured Courses Section -->
-        <section id="featured-courses">
-            <h2>Our Featured Courses</h2>
+                <!-- Row for Rates -->
+                <div class="table-row">
+                    <div class="table-header">RATES</div>
+                    <div class="table-cell">STANDARD 1-6 FROM RM20/HOUR</div>
+                    <div class="table-cell">FORM 1-3(PMR) FROM RM30/HOUR</div>
+                    <div class="table-cell">FORM 4-5(SPM) FROM RM40/HOUR</div>
+                    <div class="table-cell">DIPLOMA/STPM FROM RM80/HOUR</div>
+                </div>
 
-            <!-- Course 1 -->
-            <div class="course-card">
-                <h3>Bahasa Melayu</h3>
-                <p>Improve your understanding of Bahasa Melayu through our structured lessons and interactive sessions.</p>
+                <!-- Row for Schedules -->
+                <div class="table-row">
+                    <div class="table-header">SCHEDULES</div>
+                    <div class="table-cell">
+                        HOME TUITION: MONDAY - SATURDAY (3-5PM) (8-10PM)
+                    </div>
+                    <div class="table-cell">
+                        IN CLASSROOM: MONDAY – SATURDAY (4-6PM) (8-10PM)
+                    </div>
+                    <div class="table-cell">
+                        ONLINE CLASSES: BASED ON TEACHER’S AVAILABILITY AND REQUEST FROM STUDENT
+                    </div>
+                </div>
             </div>
-
-            <!-- Course 2 -->
-            <div class="course-card">
-                <h3>Science</h3>
-                <p>Explore the world of Science with our expert tutors, covering Physics, Chemistry, and Biology.</p>
-            </div>
-
-            <!-- Course 3 -->
-            <div class="course-card">
-                <h3>English</h3>
-                <p>Enhance your English language skills with a focus on grammar, vocabulary, and communication.</p>
-            </div>
-
-            <!-- Course 4 -->
-            <div class="course-card">
-                <h3>Mathematics</h3>
-                <p>Learn Mathematics with practical problem-solving approaches and real-life applications.</p>
-            </div>
-
-            <!-- Course 5 -->
-            <div class="course-card">
-                <h3>Add Math</h3>
-                <p>Dive deeper into Advanced Mathematics with our Add Math course, designed for higher-level learners.</p>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section id="cta">
-            <h2>Ready to Start Learning?</h2>
-            <p>Contact us today to enroll in our courses and begin your journey towards academic success.</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
         </section>
     </main>
 
@@ -175,6 +172,7 @@
     <!-- External JavaScript -->
     <script src="js/lib/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 </html>

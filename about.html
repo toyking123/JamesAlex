@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Tuition Centre - Quality education for all ages.">
-    <meta name="keywords" content="Tuition Centre, Courses, Tutors, Contact, Education">
+    <meta name="description" content="About Us - Tuition Centre, quality education for all ages.">
+    <meta name="keywords" content="About Tuition Centre, Education, Tutors">
     <meta name="author" content="Aiman, Ucu, Izzah">
     
-    <title>Welcome | Tuition Centre</title>
+    <title>About Us | Tuition Centre</title>
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- External CSS Link -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -26,14 +25,14 @@
         </div>
         <!-- Menu Section -->
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="tutors.html">Tutors</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
-
-
+  
+        
         <select id="options" onchange="navigateToPage()">
             <option value="">Select a page...</option>
             <option value="index.html">Home</option>
@@ -94,76 +93,40 @@
         setInterval(updateMarquee, 1000);
     </script>
 
-<head>
-    <title>JavaScript in HTML</title>
-</head>
-<body>
-    <button onclick="greet()">Greet</button>
-
-    <script>
-    function greet() {
-        alert("Welcome to our website!");
-    }
-    </script>
-</body>
-
 
     <!-- Header Section -->
-    <header class="home-header">
-        <h1>Welcome to Tuition Centre</h1>
-        <p>Providing quality education to nurture future success.</p>
+    <header class="about-header">
+        <h1>About Us</h1>
+        <p class="header-description">Learn more about our journey, mission, and values.</p>
     </header>
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Introduction Section -->
-        <section id="introduction">
-            <h2>Why Choose Us?</h2>
+        <!-- About Section -->
+        <section id="about-us">
+            <h2>Who We Are</h2>
             <p>
-                At Tuition Centre, we are committed to providing personalized learning experiences that help students excel academically and develop essential skills for the future.
+                We are a dedicated tuition centre providing personalized learning experiences to students of all ages. Our goal is to nurture, motivate, and guide students towards academic success.
+            </p>
+            <p>
+                Established in 2010, we have continuously strived to offer a wide range of courses, including primary, secondary, and preparatory classes for competitive exams. 
             </p>
         </section>
 
-        <!-- Featured Courses Section -->
-        <section id="featured-courses">
-            <h2>Our Featured Courses</h2>
-
-            <!-- Course 1 -->
-            <div class="course-card">
-                <h3>Bahasa Melayu</h3>
-                <p>Improve your understanding of Bahasa Melayu through our structured lessons and interactive sessions.</p>
-            </div>
-
-            <!-- Course 2 -->
-            <div class="course-card">
-                <h3>Science</h3>
-                <p>Explore the world of Science with our expert tutors, covering Physics, Chemistry, and Biology.</p>
-            </div>
-
-            <!-- Course 3 -->
-            <div class="course-card">
-                <h3>English</h3>
-                <p>Enhance your English language skills with a focus on grammar, vocabulary, and communication.</p>
-            </div>
-
-            <!-- Course 4 -->
-            <div class="course-card">
-                <h3>Mathematics</h3>
-                <p>Learn Mathematics with practical problem-solving approaches and real-life applications.</p>
-            </div>
-
-            <!-- Course 5 -->
-            <div class="course-card">
-                <h3>Add Math</h3>
-                <p>Dive deeper into Advanced Mathematics with our Add Math course, designed for higher-level learners.</p>
-            </div>
+        <!-- Mission Section -->
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to empower students with knowledge and skills that help them excel academically and build a strong foundation for their future.
+            </p>
         </section>
 
-        <!-- Call to Action Section -->
-        <section id="cta">
-            <h2>Ready to Start Learning?</h2>
-            <p>Contact us today to enroll in our courses and begin your journey towards academic success.</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
+        <!-- Vision Section -->
+        <section id="vision">
+            <h2>Our Vision</h2>
+            <p>
+                To be a leading tuition centre known for high-quality education, dedicated tutors, and a supportive learning environment.
+            </p>
         </section>
     </main>
 

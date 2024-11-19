@@ -1,0 +1,502 @@
+/*
+TODO :
+    1. Kemaskini style yang redundance untuk class. Perlu double check lagi
+    2. Sekalikan CSS yang untuk responsif tu. Boleh masuk dalam satu block @media je.
+    3. Perkemaskan komen2 supaya orang lain mudah faham. 
+*/
+
+/* CSS/Style Asas - Guna pakai pada semua pages/halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Background Kelabu Cerah */
+    color: #333333; /* Teks Hitam Arang Gelap */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CSS/Style untuk Navigation (Link pada Menu) - Guna pakai pada semua pages/halaman */
+nav {
+    background-color: #007bff; /* Royale Blue */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffeb3b; /* Kuning Terang */
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bff; /* Royale Blue */
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid #8bc34a; /* Hijau Cerah */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffeb3b; /* Kuning Terang */
+    color: #333333; /* Hitam Arang Gelap */
+}
+
+/* CSS/Style untuk Header - Guna pakai pada semua pages/halaman */
+header {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+.home-header h1, 
+.home-header p {
+    display: block; 
+    margin: 0;      
+    text-align: center; 
+}
+
+.home-header p {
+    margin-top: 10px; 
+    font-size: 18px;  
+    color: #fff;      
+}
+
+/* CSS/Style untuk Header Khusus Setiap Page/Halaman */
+.home-header{
+    background: url('../images/iStock-859281570-1568x1176.jpg') no-repeat center 27%/cover;
+}
+.about-header {
+    background: url('../images/tuition-920.webp') no-repeat center 27%/cover;
+}
+.courses-header {
+    background: url('../images/Edited.jpg') no-repeat center 27%/cover;
+}
+.tutors-header {
+    background: url('../images/hands_up.webp') no-repeat center 27%/cover;
+}
+.contact-header {
+    background: url('../images/hero-image.jpg') no-repeat center 27%/cover;
+}
+
+/* CSS/Style untuk Tajuk Bahagian/Section - Guna pakai pada semua pages/halaman */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #007bff; /* Royale Blue */
+}
+
+/* CSS/Style untuk Page index.html - Bahagian/Section Pengenalan */
+#introduction {
+    padding: 40px 0;
+    background-color: #fff; /* Background Putih */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#introduction p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* CSS/Style untuk Page index.html - Bahagian/Section Kursus Pilihan */
+#featured-courses {
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Kelabu Cerah */
+}
+
+.course-card {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Royale Blue */
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* CSS/Style untuk Page index.html - Bahagian/Section 'Call to action' (CTA) */
+#cta {
+    padding: 40px 0;
+    background-color: #007bff; /* Royale Blue */
+    color: #fff;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#cta p {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffeb3b; /* Kuning Terang */
+    color: #333333; /* Hitam Arang Gelap */
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00; /* Kuning gelap */
+}
+
+/* CSS/Style untuk Page about.html - Bahagian/Section Tentang Kami ("Who We Are"), Misi ("Our Mission"), Visi ("Our Vision") */
+#about-us, #mission, #vision {
+    padding: 40px 0;
+    background-color: #fff; /* Background Putih */
+}
+
+#about-us p, #mission p, #vision p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* CSS/Style untuk Page courses.html - Bahagian/Section "Courses" */
+#courses-list {
+    padding: 40px 0;
+    background-color: #fff; /* Background Putih */
+}
+
+.course-card {
+    margin: 20px auto;
+}
+
+/* CSS/Style untuk Page courses.html - Bahagian/Section 'Table Structure' */
+#courses-info {
+    padding: 40px 0;
+}
+
+.table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.table-row {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.table-header, .table-cell {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.table-cell {
+    justify-content: center;
+}
+
+.table-header {
+    background-color: #f9f9f9; /* Kelabu Cerah */
+    font-weight: bold;
+}
+
+.table-cell {
+    min-height: 50px;
+    background-color: #fff; /* Background Putih */
+    border: 1px solid #8bc34a; /* Hijau cerah (mengikut imej) */
+    margin: 2px;
+}
+
+.table-cell:nth-child(odd) {
+    background-color: #f4f4f4; /* Kelabu Cerah */
+}
+
+/* Responsif untuk Table Structure */
+@media (max-width: 768px) {
+    .table-row {
+        flex-direction: column;
+    }
+
+    .table-cell {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* CSS/Style untuk Page tutors.html - Bahagian/Section Tutor */
+#tutors-list {
+    padding: 40px 0;
+    background-color: #fff; /* Background Putih */
+}
+
+.tutor-card {
+    border: 1px solid #8bc34a; /* Hijau Cerah */
+    padding: 15px;
+    margin: 10px;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tutor-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.tutor-card h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Royale Blue */
+    margin-bottom: 10px;
+}
+
+.tutor-card p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* CSS/Style untuk Page tutors.html - Bahagian/Section 'Tutor Cards' */
+#tutors-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.tutor-photo {
+    width: 200px;
+    height: 250px;
+    border: 2px solid #8bc34a; /* Hijau Cerah */
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tutor-info {
+    border: 1px solid #8bc34a; /* Hijau Cerah */
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #fff; /* Background Putih */
+}
+
+.tutor-info p {
+    margin: 5px 0;
+}
+
+/* Responsif untuk Tutor Cards */
+@media (max-width: 768px) {
+    #tutors-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutor-card {
+        max-width: 90%;
+    }
+}
+
+/* CSS/Style untuk Page contact.html - Bahagian/Section Borang Contact Us ("Get in Touch") */
+#contact-form-section {
+    padding: 40px 0;
+    background-color: #fff; /* Background Putih */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Kelabu Cerah */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Royale Blue */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Royale Blue gelap */
+}
+
+/* CSS/Style untuk Bahagian/Section Footer - Guna pakai pada semua pages/halaman */
+footer {
+    background-color: #333333; /* Hitam Arang Gelap */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* CSS/Style Responsif (untuk size monitor, display atau browser yang berbeza-beza) - Guna pakai pada semua pages/halaman */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .course-card, .tutor-card {
+        margin: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .submit-btn {
+        font-size: 0.9rem;
+    }
+}
+
+    /* Styling for the moving marquee */
+         #marquee {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Moving text */
+        #marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+
+        /* Keyframes for marquee animation */
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    
+
+        

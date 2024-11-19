@@ -14,7 +14,6 @@
 
     <!-- External CSS Link -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -32,80 +31,7 @@
             <li><a href="tutors.html">Tutors</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
-
-
-        <select id="options" onchange="navigateToPage()">
-            <option value="">Select a page...</option>
-            <option value="index.html">Home</option>
-            <option value="about.html">About Us</option>
-            <option value="courses.html">Courses</option>
-            <option value="tutors.html">Tutors</option>
-            <option value="contact.html">Contact Us</option>
-        </select>
-        
-        <script>
-        function navigateToPage() {
-            const select = document.getElementById("options");
-            const selectedValue = select.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        }
-        </script>
-        
     </nav>
-
-    <!-- Marquee showing greeting, date, and time -->
-    <div id="marquee">
-        <span id="greetingMessage"></span>
-    </div>
-
-
-    <script>
-        // Function to get current greeting based on the time
-        function getGreeting() {
-            const hour = new Date().getHours();
-            if (hour < 12) {
-                return "Good Morning";
-            } else if (hour < 18) {
-                return "Good Afternoon";
-            } else {
-                return "Good Evening";
-            }
-        }
-
-        // Function to get current date and time
-        function getCurrentDateTime() {
-            const now = new Date();
-            const date = now.toLocaleDateString(); // Get date
-            const time = now.toLocaleTimeString(); // Get time
-            return `${date} ${time}`;
-        }
-
-        // Function to update the marquee message
-        function updateMarquee() {
-            const greeting = getGreeting();
-            const dateTime = getCurrentDateTime();
-            const message = `${greeting}! Current time is: ${dateTime}`;
-            document.getElementById('greetingMessage').textContent = message;
-        }
-
-        // Update marquee every second to reflect time changes
-        setInterval(updateMarquee, 1000);
-    </script>
-
-<head>
-    <title>JavaScript in HTML</title>
-</head>
-<body>
-    <button onclick="greet()">Greet</button>
-
-    <script>
-    function greet() {
-        alert("Welcome to our website!");
-    }
-    </script>
-</body>
 
 
     <!-- Header Section -->

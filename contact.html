@@ -3,60 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Lab Task 5 WebApps</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Contact us for more information about our tuition services or any other inquiries.">
+    <meta name="keywords" content="Contact Tuition Centre, Support, Inquiries">
+    <meta name="author" content="Aiman, Ucu, Izzah">
+    
+    <title>Contact Us | Tuition Centre</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>About Us</h1>
-            <nav>
-                <button onclick="navigate('index.html')">Home</button>
-                <button onclick="navigate('portfolio.html')">Portfolio</button>
-                <button onclick="navigate('contact.html')">Contact Us</button>
-            </nav>
-        </header>
-        
-        <section class="about-us">
-            <h2>Welcome to Group DDT5A</h2>
-            <p>
-                We are a dynamic team of passionate individuals dedicated to creating innovative web applications. Our mission is to empower users through intuitive and efficient digital solutions. With expertise in coding, design, and strategy, we aim to transform ideas into impactful projects that drive success.
-            </p>
-            <p>
-                Over the years, our group has earned recognition for excellence in software development, creative portfolios, and impactful community projects. We take pride in blending creativity with technology to deliver the best outcomes for our clients and community.
-            </p>
-            <h3>What We Offer:</h3>
-            <ul>
-                <li>Custom web application development</li>
-                <li>Innovative design and user experience</li>
-                <li>Business strategy and consultation</li>
-                <li>Community-focused tech solutions</li>
-            </ul>
-        </section>
-        
-        <section class="contact-us">
-            <h2>Contact Us</h2>
-            <p>Reach out to us through the following methods:</p>
-            <div class="contact-buttons">
-                <button onclick="window.location.href='mailto:DDT5A_student@gmail.com';">Email Us</button>
-                <button onclick="window.location.href='https://wa.me/1234567890';">WhatsApp Us</button>
-                <button onclick="callNumber()">Call Us</button>
-            </div>
-            <p>
-                <strong>Email:</strong> <a href="mailto:DDT5A_student@gmail.com">groupx@example.com</a><br>
-                <strong>Phone:</strong> <a href="tel:+1234567890">+1234567890</a>
-            </p>
-        </section>
 
-        <footer>
-            <p>Copyright © Group X S1 2023/2024</p>
-        </footer>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="images/tuition.jpg" alt="Tuition Centre Logo">
+        </div>
+        <!-- Menu Section -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="tutors.html">Tutors</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+   
+        
+        <select id="options" onchange="navigateToPage()">
+            <option value="">Select a page...</option>
+            <option value="index.html">Home</option>
+            <option value="about.html">About Us</option>
+            <option value="courses.html">Courses</option>
+            <option value="tutors.html">Tutors</option>
+            <option value="contact.html">Contact Us</option>
+        </select>
+        
+        <script>
+        function navigateToPage() {
+            const select = document.getElementById("options");
+            const selectedValue = select.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+        </script>
+        
+    </nav>
+
+    <!-- Marquee showing greeting, date, and time -->
+    <div id="marquee">
+        <span id="greetingMessage"></span>
     </div>
 
-         <!-- External JavaScript -->
-            <script src="js/lib/jquery-3.7.1.min.js"></script>
-            <script src="js/script.js"></script>
+
+    <script>
+        // Function to get current greeting based on the time
+        function getGreeting() {
+            const hour = new Date().getHours();
+            if (hour < 12) {
+                return "Good Morning";
+            } else if (hour < 18) {
+                return "Good Afternoon";
+            } else {
+                return "Good Evening";
+            }
+        }
+
+        // Function to get current date and time
+        function getCurrentDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString(); // Get date
+            const time = now.toLocaleTimeString(); // Get time
+            return `${date} ${time}`;
+        }
+
+        // Function to update the marquee message
+        function updateMarquee() {
+            const greeting = getGreeting();
+            const dateTime = getCurrentDateTime();
+            const message = `${greeting}! Current time is: ${dateTime}`;
+            document.getElementById('greetingMessage').textContent = message;
+        }
+
+        // Update marquee every second to reflect time changes
+        setInterval(updateMarquee, 1000);
+    </script>
+
+    
+
+    <!-- Header Section -->
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p class="header-description">We'd love to hear from you! Fill out the form below to get in touch.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Contact Form Section -->
+        <section id="contact-form-section">
+            <h2>Get in Touch</h2>
+
+            <!-- Contact Form -->
+            <form id="contactForm" action="#" method="POST">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+                <button onclick="showAlert ()">Click Me</button>
+
+<script>
+function showAlert () {
+    alert ("Hello! This is an alert message.");
+}
+</script>
+
+            </form>
+        </section>
+    </main>
+
+    <p id="currentDate"></p>
+
+<script>
+document.getElementById("currentDate").innerText = new Date().toLocaleDateString();
+</script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Tuition Website. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/lib/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Validate Email
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // Validate Password
+            const password = document.getElementById('password').value;
+            const passwordPattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert('Password must be at least 8 characters long, contain an uppercase letter, a symbol, and a number.');
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // If all validations pass, allow form submission
+            alert('Form submitted successfully!');
+        });
+    </script>
 
 </body>
 </html>
